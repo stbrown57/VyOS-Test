@@ -1,0 +1,140 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36" version="28.1.1" pages="2">
+  <diagram name="Page-1" id="YJpuhlcBkHwwciwfDe9R">
+    <mxGraphModel dx="1216" dy="588" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="kFF_2CkMexK1HPocRDjc-2" value="Internet" style="sketch=0;verticalLabelPosition=bottom;sketch=0;aspect=fixed;html=1;verticalAlign=top;strokeColor=none;fillColor=#000000;align=center;outlineConnect=0;pointerEvents=1;shape=mxgraph.citrix2.cloud;" parent="1" vertex="1">
+          <mxGeometry x="430" y="50" width="50" height="28.46" as="geometry" />
+        </mxCell>
+        <mxCell id="kFF_2CkMexK1HPocRDjc-3" value="VyOS Internet Sim Bridge" style="pointerEvents=1;shadow=0;dashed=0;html=1;strokeColor=none;fillColor=#434445;aspect=fixed;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;align=center;outlineConnect=0;shape=mxgraph.vvd.virtual_switch;" parent="1" vertex="1">
+          <mxGeometry x="430" y="216.5" width="50" height="26.5" as="geometry" />
+        </mxCell>
+        <mxCell id="7MHUbR-k5VXV3lkaedUg-22" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=classic;startFill=1;" parent="1" source="kFF_2CkMexK1HPocRDjc-4" target="kFF_2CkMexK1HPocRDjc-2" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="kFF_2CkMexK1HPocRDjc-4" value="BFNet Protected Net&lt;div&gt;192.168.1.0/24&lt;/div&gt;" style="sketch=0;pointerEvents=1;shadow=0;dashed=0;html=1;strokeColor=none;fillColor=#434445;aspect=fixed;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;align=center;outlineConnect=0;shape=mxgraph.vvd.networks;" parent="1" vertex="1">
+          <mxGeometry x="430" y="120" width="50" height="30.5" as="geometry" />
+        </mxCell>
+        <mxCell id="kFF_2CkMexK1HPocRDjc-5" value="&amp;nbsp;# podman network create vyos-internet" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="530" y="214.75" width="230" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="kFF_2CkMexK1HPocRDjc-8" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;" parent="1" source="kFF_2CkMexK1HPocRDjc-6" target="kFF_2CkMexK1HPocRDjc-3" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <UserObject label="&lt;a href=&quot;test&quot;&gt;VyOS WAN&lt;/a&gt; endpoint" link="https://suse.com/c/running-kea-dhcp-as-a-podman-container-a-step-by-step" linkTarget="_blank" id="kFF_2CkMexK1HPocRDjc-6">
+          <mxCell style="rounded=1;whiteSpace=wrap;html=1;shadow=1;glass=0;" parent="1" vertex="1">
+            <mxGeometry x="380" y="290" width="150" height="60" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="kFF_2CkMexK1HPocRDjc-7" value="This container will run a Kea DHCP server to simulate the ISP&#39;s (Verizon) DHCP server. there will also be a HTTP response target to test connectivity. through port 80. The container needs a &quot;VyOS internet&quot; interface and a VyOS WAN interface. IP forwarding should be enabled and the default route should be the VyOS Internet interface." style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="20" y="280" width="330" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="7MHUbR-k5VXV3lkaedUg-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;" parent="1" source="7MHUbR-k5VXV3lkaedUg-1" target="kFF_2CkMexK1HPocRDjc-6" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="7MHUbR-k5VXV3lkaedUg-1" value="VyOS WAN Network" style="sketch=0;pointerEvents=1;shadow=0;dashed=0;html=1;strokeColor=none;fillColor=#434445;aspect=fixed;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;align=center;outlineConnect=0;shape=mxgraph.vvd.virtual_switch;points=[];" parent="1" vertex="1">
+          <mxGeometry x="430" y="410" width="50" height="26.5" as="geometry" />
+        </mxCell>
+        <mxCell id="7MHUbR-k5VXV3lkaedUg-7" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;VyOS Testing POD&lt;/h1&gt;&lt;p&gt;This pod should include all required containers, networks and volumes needed to simulate the BFNet environment. It will be used to test firewall rules and policies along with new VyOS rolling instances.&lt;/p&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="20" y="120" width="230" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="7MHUbR-k5VXV3lkaedUg-9" value="# podman network create --internal \&lt;div&gt;--ipam-driver=none vyos-wan&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="540" y="369.75" width="270" height="33.5" as="geometry" />
+        </mxCell>
+        <mxCell id="7MHUbR-k5VXV3lkaedUg-11" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;" parent="1" source="kFF_2CkMexK1HPocRDjc-3" target="kFF_2CkMexK1HPocRDjc-4" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="7MHUbR-k5VXV3lkaedUg-12" value="NAT" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="7MHUbR-k5VXV3lkaedUg-11" connectable="0" vertex="1">
+          <mxGeometry x="-0.4245" y="-1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="7MHUbR-k5VXV3lkaedUg-13" value="This network will simulate the switch that connects the routers WAN interface to the ISP&#39;s connection" style="text;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="30" y="403.25" width="300" height="36.75" as="geometry" />
+        </mxCell>
+        <mxCell id="7MHUbR-k5VXV3lkaedUg-16" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;" parent="1" source="7MHUbR-k5VXV3lkaedUg-15" target="7MHUbR-k5VXV3lkaedUg-1" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="7MHUbR-k5VXV3lkaedUg-17" value="WAN eth0" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="7MHUbR-k5VXV3lkaedUg-16" connectable="0" vertex="1">
+          <mxGeometry x="-0.7972" y="1" relative="1" as="geometry">
+            <mxPoint x="11" y="-2" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="7MHUbR-k5VXV3lkaedUg-27" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;" parent="1" source="7MHUbR-k5VXV3lkaedUg-15" target="7MHUbR-k5VXV3lkaedUg-25" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <UserObject label="VyOS Primary&lt;br&gt;bfnetgw" link="data:page/id,GfwSnYsWayV_x6-FL-_3" id="7MHUbR-k5VXV3lkaedUg-15">
+          <mxCell style="rounded=1;whiteSpace=wrap;html=1;shadow=1;" parent="1" vertex="1">
+            <mxGeometry x="310" y="510" width="120" height="60" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="7MHUbR-k5VXV3lkaedUg-21" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;" parent="1" source="7MHUbR-k5VXV3lkaedUg-18" target="7MHUbR-k5VXV3lkaedUg-1" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="7MHUbR-k5VXV3lkaedUg-24" value="WAN eth0" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="7MHUbR-k5VXV3lkaedUg-21" connectable="0" vertex="1">
+          <mxGeometry x="-0.6632" y="-1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="7MHUbR-k5VXV3lkaedUg-28" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;" parent="1" source="7MHUbR-k5VXV3lkaedUg-18" target="7MHUbR-k5VXV3lkaedUg-25" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <UserObject label="VyOS Secondary&lt;br&gt;gwbackup" link="data:page/id,GfwSnYsWayV_x6-FL-_3" id="7MHUbR-k5VXV3lkaedUg-18">
+          <mxCell style="rounded=1;whiteSpace=wrap;html=1;shadow=1;" parent="1" vertex="1">
+            <mxGeometry x="480" y="510" width="120" height="60" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="7MHUbR-k5VXV3lkaedUg-23" value="The VyOS instances will be based on podman containers built from the rolling release &lt;a href=&quot;https://docs.vyos.io/en/latest/installation/virtual/docker.html&quot;&gt;ISO&lt;/a&gt;s. Each VyOS instance will require a volume for persistent configuration, and connected networks to the VyOS WAN bridge and the VyOS LAN bridge." style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="20" y="495" width="280" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="7MHUbR-k5VXV3lkaedUg-30" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;endArrow=none;endFill=0;" parent="1" source="7MHUbR-k5VXV3lkaedUg-25" target="7MHUbR-k5VXV3lkaedUg-29" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="7MHUbR-k5VXV3lkaedUg-25" value="VyOS LAN Network" style="sketch=0;pointerEvents=1;shadow=0;dashed=0;html=1;strokeColor=none;fillColor=#434445;aspect=fixed;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;align=center;outlineConnect=0;shape=mxgraph.vvd.virtual_switch;points=[];" parent="1" vertex="1">
+          <mxGeometry x="430" y="610" width="50" height="26.5" as="geometry" />
+        </mxCell>
+        <mxCell id="7MHUbR-k5VXV3lkaedUg-26" value="# podman network create --internal \&lt;div&gt;--ipam-driver=none vyos-lan&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="550" y="606.5" width="290" height="33.5" as="geometry" />
+        </mxCell>
+        <mxCell id="7MHUbR-k5VXV3lkaedUg-29" value="Test Host" style="rounded=1;whiteSpace=wrap;html=1;shadow=1;" parent="1" vertex="1">
+          <mxGeometry x="395" y="700" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="7MHUbR-k5VXV3lkaedUg-31" value="Text" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="380" y="620" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="7MHUbR-k5VXV3lkaedUg-32" value="This container is connected to the VyOS LAN network and should include tools need to test connectivity, routing, firewall rules and highly available failover. UBI should work and any additional utilities can be install and&amp;nbsp; committed.&amp;nbsp;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="20" y="687.5" width="280" height="85" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="GfwSnYsWayV_x6-FL-_3" name="VyOS-Containers">
+    <mxGraphModel dx="1106" dy="787" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="kLU4nJiAnD5gKMm8QROc-1" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;VyOS Container&lt;/h1&gt;&lt;p&gt;Each instance of the vyos will require&amp;nbsp;&lt;/p&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="50" y="30" width="240" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="kLU4nJiAnD5gKMm8QROc-4" value="&lt;p class=&quot;p1&quot; style=&quot;margin: 0px; font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-alternates: normal; font-size-adjust: none; font-kerning: auto; font-optical-sizing: auto; font-feature-settings: normal; font-variation-settings: normal; font-variant-position: normal; font-variant-emoji: normal; font-stretch: normal; font-size: 11px; line-height: normal; font-family: Menlo;&quot;&gt;&lt;span class=&quot;s1&quot; style=&quot;font-variant-ligatures: no-common-ligatures; color: rgb(180, 36, 25);&quot;&gt;&lt;b&gt;podman&lt;/b&gt;&lt;/span&gt;&lt;span class=&quot;s2&quot; style=&quot;font-variant-ligatures: no-common-ligatures;&quot;&gt; run -d --rm --name vyos-1&lt;span class=&quot;Apple-converted-space&quot;&gt;&amp;nbsp;&lt;/span&gt;--hostname bfnetgw&lt;span class=&quot;Apple-converted-space&quot;&gt;&amp;nbsp;&amp;nbsp;&lt;/span&gt;--privileged&lt;span class=&quot;Apple-converted-space&quot;&gt;&amp;nbsp;\&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;&lt;p class=&quot;p1&quot; style=&quot;margin: 0px; font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-alternates: normal; font-size-adjust: none; font-kerning: auto; font-optical-sizing: auto; font-feature-settings: normal; font-variation-settings: normal; font-variant-position: normal; font-variant-emoji: normal; font-stretch: normal; font-size: 11px; line-height: normal; font-family: Menlo;&quot;&gt;&lt;span class=&quot;s2&quot; style=&quot;font-variant-ligatures: no-common-ligatures;&quot;&gt;&lt;span class=&quot;Apple-converted-space&quot;&gt;&amp;nbsp;&lt;/span&gt;--network vyos-wan&lt;span class=&quot;Apple-converted-space&quot;&gt;&amp;nbsp;\&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;&lt;p class=&quot;p1&quot; style=&quot;margin: 0px; font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-alternates: normal; font-size-adjust: none; font-kerning: auto; font-optical-sizing: auto; font-feature-settings: normal; font-variation-settings: normal; font-variant-position: normal; font-variant-emoji: normal; font-stretch: normal; font-size: 11px; line-height: normal; font-family: Menlo;&quot;&gt;&lt;span class=&quot;s2&quot; style=&quot;font-variant-ligatures: no-common-ligatures;&quot;&gt;&lt;span class=&quot;Apple-converted-space&quot;&gt;&amp;nbsp;&lt;/span&gt;--network vyos-lan&lt;span class=&quot;Apple-converted-space&quot;&gt;&amp;nbsp;\&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;&lt;p class=&quot;p1&quot; style=&quot;margin: 0px; font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-alternates: normal; font-size-adjust: none; font-kerning: auto; font-optical-sizing: auto; font-feature-settings: normal; font-variation-settings: normal; font-variant-position: normal; font-variant-emoji: normal; font-stretch: normal; font-size: 11px; line-height: normal; font-family: Menlo;&quot;&gt;&lt;span class=&quot;s2&quot; style=&quot;font-variant-ligatures: no-common-ligatures;&quot;&gt;&lt;span class=&quot;Apple-converted-space&quot;&gt;&amp;nbsp;&lt;/span&gt;-v vyos-1.config:/opt/vyatta/etc/config:z&lt;span class=&quot;Apple-converted-space&quot;&gt;&amp;nbsp;\&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;&lt;p class=&quot;p1&quot; style=&quot;margin: 0px; font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-alternates: normal; font-size-adjust: none; font-kerning: auto; font-optical-sizing: auto; font-feature-settings: normal; font-variation-settings: normal; font-variant-position: normal; font-variant-emoji: normal; font-stretch: normal; font-size: 11px; line-height: normal; font-family: Menlo;&quot;&gt;&lt;span class=&quot;s2&quot; style=&quot;font-variant-ligatures: no-common-ligatures;&quot;&gt;&lt;span class=&quot;Apple-converted-space&quot;&gt;&amp;nbsp;&lt;/span&gt;-v /lib/modules:/lib/modules localhost/vyos:latest /sbin/init&lt;/span&gt;&lt;/p&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="160" y="240" width="530" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="CZyPWxo7Ch3uBos9o8rm-2" value="&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&lt;b&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;Create persistent volumes for each instances configuration&lt;/font&gt;:&lt;/b&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;# podman volume create vyos-1.config&lt;/div&gt;&lt;div&gt;# podman volume create vyos-2.config&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="160" y="120" width="420" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="CZyPWxo7Ch3uBos9o8rm-3" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;&lt;b&gt;Create Container vyos-1&lt;/b&gt;&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="160" y="220" width="170" height="30" as="geometry" />
+        </mxCell>
+        <UserObject label="&lt;font style=&quot;font-size: 11px;&quot; face=&quot;Helvetica&quot;&gt;&lt;font style=&quot;color: light-dark(rgb(185, 65, 14), rgb(237, 237, 237));&quot;&gt;podman&lt;/font&gt; run -d --rm --name vyos-2 --hostname gwbackup --privileged \&amp;nbsp;&lt;br&gt;&amp;nbsp; --network vyos-wan \&lt;br&gt;&amp;nbsp; --network vyos-lan \&lt;br&gt;&amp;nbsp; -v vyos-2.config:/opt/vyatta/etc/config:z \&lt;br&gt;&amp;nbsp; -v /lib/modules:/lib/modules localhost/vyos:latest /sbin/init&lt;/font&gt;" link="podman run -d --rm --name vyos-1 --hostname bfnetgw  --privileged \&#xa;&#xa; --network vyos-wan \&#xa;&#xa; --network vyos-lan \&#xa;&#xa; -v vyos-1.config:/opt/vyatta/etc/config:z \&#xa;&#xa; -v /lib/modules:/lib/modules localhost/vyos:latest /sbin/init" id="qXnhQig8u6OTzKmhygaf-1">
+          <mxCell style="text;whiteSpace=wrap;html=1;fontFamily=Courier New;" vertex="1" parent="1">
+            <mxGeometry x="160" y="390" width="510" height="90" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="qXnhQig8u6OTzKmhygaf-2" value="Create Container vyos-2" style="text;whiteSpace=wrap;html=1;fontSize=14;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="160" y="360" width="170" height="40" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
