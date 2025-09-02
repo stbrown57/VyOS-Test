@@ -1,0 +1,13 @@
+# Your base image
+FROM alpine:3.22
+
+# Install iptables and other necessary packages
+RUN apk add --no-cache iptables
+
+# Set up the NAT rule
+RUN echo "net.ipv4.ip_forward=1" >> /etc/sysctl.conf
+RUN iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE
+RUN mkdir -p /etc/iptables && iptables-save > /etc/iptables/rules.v4
+
+# Set up the startup script to restore rules
+CMD ["sh", "-c", "sysctl -p && iptables-restore < /etc/iptables/rules.v4 && tail -f /dev/null"]

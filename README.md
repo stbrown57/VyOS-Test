@@ -6,6 +6,6 @@ I stared with the drawing to describe the environment. Custom containers where a
 
 The configurations of both the primary and secondary VyOS instance on the proposed production devices were exported and copied to the repository.
 
+```bash
+show configuration command > [filename.conf]
 ```
-$ show configuration command > [filename.conf]
-

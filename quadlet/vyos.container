@@ -1,0 +1,19 @@
+[Unit]
+Description=VyOS Rotuer/Firewall 
+
+[Container]
+ContainerName=vyos
+Image=localhsot/vyos:1.5-2025-08-13
+Hostname=bfnetgw
+Privileged
+Network=wan
+Network=lan
+Network=dmz
+Volume=/lib/modules:/lib/modules
+Volume=/vyos.config:/opt/vyatta/etc/config:z
+
+[Service]
+Restart=on-failure
+
+[Install]
+WantedBy=default.target
