@@ -3,14 +3,16 @@ Description=VyOS Rotuer/Firewall
 
 [Container]
 ContainerName=vyos
-Image=localhsot/vyos:1.5-2025-08-13
-Hostname=bfnetgw
-Privileged
+Image=localhost/vyos:1.5-2025-08-13
+HostName=bfnetgw
+SecurityLabelDisable=true
+PodmanArgs=--privileged
 Network=wan
 Network=lan
 Network=dmz
 Volume=/lib/modules:/lib/modules
-Volume=/vyos.config:/opt/vyatta/etc/config:z
+Volume=vyos.config:/opt/vyatta/etc/config:z
+Exec=/sbin/init
 
 [Service]
 Restart=on-failure
