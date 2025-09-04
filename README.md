@@ -9,6 +9,7 @@ Two VyOS podman container instances are running on two fan-less devices, (Merckx
 * Lease renewal [problem](DHCP-WAN-Renewal.md)
 
 * WAN interface failover
+  This may have been a problem with a semi-smart switch and two different VLANs. I replaced it with a unmanaged switch, we will see if that works.
 
 ## Test Environment
 

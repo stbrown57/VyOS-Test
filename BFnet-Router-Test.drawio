@@ -112,120 +112,120 @@
         </mxGraphModel>
     </diagram>
     <diagram name="VyOS Network Interfaces" id="ODgUAoBt59TFhCGswUOa">
-        <mxGraphModel dx="754" dy="485" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+        <mxGraphModel dx="814" dy="485" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
             <root>
                 <mxCell id="TwFW3nXOWYlrV0tRIcs8-0"/>
                 <mxCell id="TwFW3nXOWYlrV0tRIcs8-1" parent="TwFW3nXOWYlrV0tRIcs8-0"/>
-                <mxCell id="TwFW3nXOWYlrV0tRIcs8-2" value="Internet" style="sketch=0;verticalLabelPosition=top;sketch=0;aspect=fixed;html=1;verticalAlign=bottom;strokeColor=none;fillColor=#000000;align=center;outlineConnect=0;pointerEvents=1;shape=mxgraph.citrix2.cloud;labelPosition=center;" vertex="1" parent="TwFW3nXOWYlrV0tRIcs8-1">
+                <mxCell id="TwFW3nXOWYlrV0tRIcs8-2" value="Internet" style="sketch=0;verticalLabelPosition=top;sketch=0;aspect=fixed;html=1;verticalAlign=bottom;strokeColor=none;fillColor=#000000;align=center;outlineConnect=0;pointerEvents=1;shape=mxgraph.citrix2.cloud;labelPosition=center;" parent="TwFW3nXOWYlrV0tRIcs8-1" vertex="1">
                     <mxGeometry x="428.65000000000003" y="40" width="52.7" height="30" as="geometry"/>
                 </mxCell>
                 <UserObject label="VyOS Internet Sim Bridge" link="/VyOS-internet-net.md" id="TwFW3nXOWYlrV0tRIcs8-3">
-                    <mxCell style="pointerEvents=1;shadow=0;dashed=0;html=1;strokeColor=#82b366;fillColor=#d5e8d4;aspect=fixed;labelPosition=left;verticalLabelPosition=middle;verticalAlign=middle;align=right;outlineConnect=0;shape=mxgraph.vvd.virtual_switch;" vertex="1" parent="TwFW3nXOWYlrV0tRIcs8-1">
+                    <mxCell style="pointerEvents=1;shadow=0;dashed=0;html=1;strokeColor=#82b366;fillColor=#d5e8d4;aspect=fixed;labelPosition=left;verticalLabelPosition=middle;verticalAlign=middle;align=right;outlineConnect=0;shape=mxgraph.vvd.virtual_switch;" parent="TwFW3nXOWYlrV0tRIcs8-1" vertex="1">
                         <mxGeometry x="431.35" y="240" width="50" height="26.5" as="geometry"/>
                     </mxCell>
                 </UserObject>
-                <mxCell id="TwFW3nXOWYlrV0tRIcs8-4" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=none;startFill=0;endArrow=none;endFill=0;" edge="1" parent="TwFW3nXOWYlrV0tRIcs8-1" source="TwFW3nXOWYlrV0tRIcs8-5" target="TwFW3nXOWYlrV0tRIcs8-2">
+                <mxCell id="TwFW3nXOWYlrV0tRIcs8-4" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=none;startFill=0;endArrow=none;endFill=0;" parent="TwFW3nXOWYlrV0tRIcs8-1" source="TwFW3nXOWYlrV0tRIcs8-5" target="TwFW3nXOWYlrV0tRIcs8-2" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="TwFW3nXOWYlrV0tRIcs8-5" value="BFNet Protected Net&lt;div&gt;192.168.1.0/24&lt;/div&gt;" style="sketch=0;pointerEvents=1;shadow=0;dashed=0;html=1;strokeColor=none;fillColor=#434445;aspect=fixed;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;align=center;outlineConnect=0;shape=mxgraph.vvd.networks;" vertex="1" parent="TwFW3nXOWYlrV0tRIcs8-1">
+                <mxCell id="TwFW3nXOWYlrV0tRIcs8-5" value="BFNet Protected Net&lt;div&gt;192.168.1.0/24&lt;/div&gt;" style="sketch=0;pointerEvents=1;shadow=0;dashed=0;html=1;strokeColor=none;fillColor=#434445;aspect=fixed;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;align=center;outlineConnect=0;shape=mxgraph.vvd.networks;" parent="TwFW3nXOWYlrV0tRIcs8-1" vertex="1">
                     <mxGeometry x="430" y="120" width="50" height="30.5" as="geometry"/>
                 </mxCell>
-                <mxCell id="TwFW3nXOWYlrV0tRIcs8-7" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;" edge="1" parent="TwFW3nXOWYlrV0tRIcs8-1" source="TwFW3nXOWYlrV0tRIcs8-8" target="TwFW3nXOWYlrV0tRIcs8-3">
+                <mxCell id="TwFW3nXOWYlrV0tRIcs8-7" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;" parent="TwFW3nXOWYlrV0tRIcs8-1" source="TwFW3nXOWYlrV0tRIcs8-8" target="TwFW3nXOWYlrV0tRIcs8-3" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
                 <UserObject label="&lt;a href=&quot;test&quot;&gt;VyOS WAN&lt;/a&gt; endpoint" link="https://suse.com/c/running-kea-dhcp-as-a-podman-container-a-step-by-step" linkTarget="_blank" id="TwFW3nXOWYlrV0tRIcs8-8">
-                    <mxCell style="rounded=1;whiteSpace=wrap;html=1;shadow=1;glass=0;" vertex="1" parent="TwFW3nXOWYlrV0tRIcs8-1">
+                    <mxCell style="rounded=1;whiteSpace=wrap;html=1;shadow=1;glass=0;" parent="TwFW3nXOWYlrV0tRIcs8-1" vertex="1">
                         <mxGeometry x="381.35" y="320" width="150" height="60" as="geometry"/>
                     </mxCell>
                 </UserObject>
-                <mxCell id="TwFW3nXOWYlrV0tRIcs8-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;" edge="1" parent="TwFW3nXOWYlrV0tRIcs8-1" source="TwFW3nXOWYlrV0tRIcs8-11" target="TwFW3nXOWYlrV0tRIcs8-8">
+                <mxCell id="TwFW3nXOWYlrV0tRIcs8-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;" parent="TwFW3nXOWYlrV0tRIcs8-1" source="TwFW3nXOWYlrV0tRIcs8-11" target="TwFW3nXOWYlrV0tRIcs8-8" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="TwFW3nXOWYlrV0tRIcs8-11" value="VyOS WAN Network" style="sketch=0;pointerEvents=1;shadow=0;dashed=0;html=1;strokeColor=#82b366;fillColor=#d5e8d4;aspect=fixed;labelPosition=left;verticalLabelPosition=middle;verticalAlign=middle;align=right;outlineConnect=0;shape=mxgraph.vvd.virtual_switch;points=[];" vertex="1" parent="TwFW3nXOWYlrV0tRIcs8-1">
+                <mxCell id="TwFW3nXOWYlrV0tRIcs8-11" value="VyOS WAN Network" style="sketch=0;pointerEvents=1;shadow=0;dashed=0;html=1;strokeColor=#82b366;fillColor=#d5e8d4;aspect=fixed;labelPosition=left;verticalLabelPosition=middle;verticalAlign=middle;align=right;outlineConnect=0;shape=mxgraph.vvd.virtual_switch;points=[];" parent="TwFW3nXOWYlrV0tRIcs8-1" vertex="1">
                     <mxGeometry x="431.35" y="440" width="50" height="26.5" as="geometry"/>
                 </mxCell>
-                <mxCell id="TwFW3nXOWYlrV0tRIcs8-14" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;" edge="1" parent="TwFW3nXOWYlrV0tRIcs8-1" source="TwFW3nXOWYlrV0tRIcs8-3" target="TwFW3nXOWYlrV0tRIcs8-5">
+                <mxCell id="TwFW3nXOWYlrV0tRIcs8-14" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;" parent="TwFW3nXOWYlrV0tRIcs8-1" source="TwFW3nXOWYlrV0tRIcs8-3" target="TwFW3nXOWYlrV0tRIcs8-5" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="TwFW3nXOWYlrV0tRIcs8-15" value="NAT" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" connectable="0" vertex="1" parent="TwFW3nXOWYlrV0tRIcs8-14">
+                <mxCell id="TwFW3nXOWYlrV0tRIcs8-15" value="NAT" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="TwFW3nXOWYlrV0tRIcs8-14" connectable="0" vertex="1">
                     <mxGeometry x="-0.4245" y="-1" relative="1" as="geometry">
                         <mxPoint as="offset"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="TwFW3nXOWYlrV0tRIcs8-17" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;" edge="1" parent="TwFW3nXOWYlrV0tRIcs8-1" source="TwFW3nXOWYlrV0tRIcs8-20" target="TwFW3nXOWYlrV0tRIcs8-11">
+                <mxCell id="TwFW3nXOWYlrV0tRIcs8-17" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;" parent="TwFW3nXOWYlrV0tRIcs8-1" source="TwFW3nXOWYlrV0tRIcs8-20" target="TwFW3nXOWYlrV0tRIcs8-11" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="TwFW3nXOWYlrV0tRIcs8-18" value="DHCP&lt;div&gt;eth0&lt;/div&gt;&lt;div&gt;192.168.100.0/24&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" connectable="0" vertex="1" parent="TwFW3nXOWYlrV0tRIcs8-17">
+                <mxCell id="TwFW3nXOWYlrV0tRIcs8-18" value="DHCP&lt;div&gt;eth0&lt;/div&gt;&lt;div&gt;192.168.100.0/24&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="TwFW3nXOWYlrV0tRIcs8-17" connectable="0" vertex="1">
                     <mxGeometry x="-0.7972" y="1" relative="1" as="geometry">
                         <mxPoint x="36" y="-40" as="offset"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="TwFW3nXOWYlrV0tRIcs8-19" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;" edge="1" parent="TwFW3nXOWYlrV0tRIcs8-1" source="TwFW3nXOWYlrV0tRIcs8-20" target="TwFW3nXOWYlrV0tRIcs8-27">
+                <mxCell id="TwFW3nXOWYlrV0tRIcs8-19" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;" parent="TwFW3nXOWYlrV0tRIcs8-1" source="TwFW3nXOWYlrV0tRIcs8-20" target="TwFW3nXOWYlrV0tRIcs8-27" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="nc7TGM9VJOAbuPxR5EIq-2" value="eth1&lt;div&gt;192.168.1.3&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="TwFW3nXOWYlrV0tRIcs8-19">
+                <mxCell id="nc7TGM9VJOAbuPxR5EIq-2" value="eth1&lt;div&gt;192.168.1.3&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="TwFW3nXOWYlrV0tRIcs8-19" vertex="1" connectable="0">
                     <mxGeometry x="-0.1502" y="-1" relative="1" as="geometry">
                         <mxPoint as="offset"/>
                     </mxGeometry>
                 </mxCell>
                 <UserObject label="VyOS Primary&lt;br&gt;bfnetgw" link="data:page/id,GfwSnYsWayV_x6-FL-_3" id="TwFW3nXOWYlrV0tRIcs8-20">
-                    <mxCell style="rounded=1;whiteSpace=wrap;html=1;shadow=1;" vertex="1" parent="TwFW3nXOWYlrV0tRIcs8-1">
+                    <mxCell style="rounded=1;whiteSpace=wrap;html=1;shadow=1;" parent="TwFW3nXOWYlrV0tRIcs8-1" vertex="1">
                         <mxGeometry x="261.35" y="570" width="120" height="60" as="geometry"/>
                     </mxCell>
                 </UserObject>
-                <mxCell id="TwFW3nXOWYlrV0tRIcs8-21" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;" edge="1" parent="TwFW3nXOWYlrV0tRIcs8-1" source="TwFW3nXOWYlrV0tRIcs8-24" target="TwFW3nXOWYlrV0tRIcs8-11">
+                <mxCell id="TwFW3nXOWYlrV0tRIcs8-21" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;" parent="TwFW3nXOWYlrV0tRIcs8-1" source="TwFW3nXOWYlrV0tRIcs8-24" target="TwFW3nXOWYlrV0tRIcs8-11" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="TwFW3nXOWYlrV0tRIcs8-22" value="DHCP&lt;div&gt;eth0&lt;/div&gt;&lt;div&gt;192.168.100.0/24&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" connectable="0" vertex="1" parent="TwFW3nXOWYlrV0tRIcs8-21">
+                <mxCell id="TwFW3nXOWYlrV0tRIcs8-22" value="DHCP&lt;div&gt;eth0&lt;/div&gt;&lt;div&gt;192.168.100.0/24&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="TwFW3nXOWYlrV0tRIcs8-21" connectable="0" vertex="1">
                     <mxGeometry x="-0.6632" y="-1" relative="1" as="geometry">
                         <mxPoint x="-16" y="-24" as="offset"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="TwFW3nXOWYlrV0tRIcs8-23" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;" edge="1" parent="TwFW3nXOWYlrV0tRIcs8-1" source="TwFW3nXOWYlrV0tRIcs8-24" target="TwFW3nXOWYlrV0tRIcs8-27">
+                <mxCell id="TwFW3nXOWYlrV0tRIcs8-23" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;" parent="TwFW3nXOWYlrV0tRIcs8-1" source="TwFW3nXOWYlrV0tRIcs8-24" target="TwFW3nXOWYlrV0tRIcs8-27" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="nc7TGM9VJOAbuPxR5EIq-1" value="eth1&lt;div&gt;192.168..1.2&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="TwFW3nXOWYlrV0tRIcs8-23">
+                <mxCell id="nc7TGM9VJOAbuPxR5EIq-1" value="eth1&lt;div&gt;192.168..1.2&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="TwFW3nXOWYlrV0tRIcs8-23" vertex="1" connectable="0">
                     <mxGeometry x="-0.2831" y="1" relative="1" as="geometry">
                         <mxPoint as="offset"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="nc7TGM9VJOAbuPxR5EIq-7" style="edgeStyle=none;html=1;exitX=0.75;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="TwFW3nXOWYlrV0tRIcs8-1" source="TwFW3nXOWYlrV0tRIcs8-24">
+                <mxCell id="nc7TGM9VJOAbuPxR5EIq-7" style="edgeStyle=none;html=1;exitX=0.75;exitY=1;exitDx=0;exitDy=0;" parent="TwFW3nXOWYlrV0tRIcs8-1" source="TwFW3nXOWYlrV0tRIcs8-24" edge="1">
                     <mxGeometry relative="1" as="geometry">
                         <mxPoint x="610" y="630" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
                 <UserObject label="VyOS Secondary&lt;br&gt;gwbackup" link="data:page/id,GfwSnYsWayV_x6-FL-_3" id="TwFW3nXOWYlrV0tRIcs8-24">
-                    <mxCell style="rounded=1;whiteSpace=wrap;html=1;shadow=1;" vertex="1" parent="TwFW3nXOWYlrV0tRIcs8-1">
+                    <mxCell style="rounded=1;whiteSpace=wrap;html=1;shadow=1;" parent="TwFW3nXOWYlrV0tRIcs8-1" vertex="1">
                         <mxGeometry x="530" y="570" width="120" height="60" as="geometry"/>
                     </mxCell>
                 </UserObject>
-                <mxCell id="TwFW3nXOWYlrV0tRIcs8-26" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;endArrow=none;endFill=0;" edge="1" parent="TwFW3nXOWYlrV0tRIcs8-1" source="TwFW3nXOWYlrV0tRIcs8-27" target="TwFW3nXOWYlrV0tRIcs8-29">
+                <mxCell id="TwFW3nXOWYlrV0tRIcs8-26" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;endArrow=none;endFill=0;" parent="TwFW3nXOWYlrV0tRIcs8-1" source="TwFW3nXOWYlrV0tRIcs8-27" target="TwFW3nXOWYlrV0tRIcs8-29" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="nc7TGM9VJOAbuPxR5EIq-0" value="DHCP 192.168.1.0/24&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="TwFW3nXOWYlrV0tRIcs8-26">
+                <mxCell id="nc7TGM9VJOAbuPxR5EIq-0" value="DHCP 192.168.1.0/24&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="TwFW3nXOWYlrV0tRIcs8-26" vertex="1" connectable="0">
                     <mxGeometry x="0.4023" relative="1" as="geometry">
                         <mxPoint y="13" as="offset"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="TwFW3nXOWYlrV0tRIcs8-27" value="VyOS LAN Network" style="sketch=0;pointerEvents=1;shadow=0;dashed=0;html=1;strokeColor=#82b366;fillColor=#d5e8d4;aspect=fixed;labelPosition=left;verticalLabelPosition=middle;verticalAlign=middle;align=right;outlineConnect=0;shape=mxgraph.vvd.virtual_switch;points=[];" vertex="1" parent="TwFW3nXOWYlrV0tRIcs8-1">
+                <mxCell id="TwFW3nXOWYlrV0tRIcs8-27" value="VyOS LAN Network" style="sketch=0;pointerEvents=1;shadow=0;dashed=0;html=1;strokeColor=#82b366;fillColor=#d5e8d4;aspect=fixed;labelPosition=left;verticalLabelPosition=middle;verticalAlign=middle;align=right;outlineConnect=0;shape=mxgraph.vvd.virtual_switch;points=[];" parent="TwFW3nXOWYlrV0tRIcs8-1" vertex="1">
                     <mxGeometry x="430" y="680" width="50" height="26.5" as="geometry"/>
                 </mxCell>
-                <mxCell id="nc7TGM9VJOAbuPxR5EIq-6" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="TwFW3nXOWYlrV0tRIcs8-1" source="TwFW3nXOWYlrV0tRIcs8-29">
+                <mxCell id="nc7TGM9VJOAbuPxR5EIq-6" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="TwFW3nXOWYlrV0tRIcs8-1" source="TwFW3nXOWYlrV0tRIcs8-29" edge="1">
                     <mxGeometry relative="1" as="geometry">
                         <mxPoint x="455" y="840" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="TwFW3nXOWYlrV0tRIcs8-29" value="Test Host" style="rounded=1;whiteSpace=wrap;html=1;shadow=1;" vertex="1" parent="TwFW3nXOWYlrV0tRIcs8-1">
+                <mxCell id="TwFW3nXOWYlrV0tRIcs8-29" value="Test Host" style="rounded=1;whiteSpace=wrap;html=1;shadow=1;" parent="TwFW3nXOWYlrV0tRIcs8-1" vertex="1">
                     <mxGeometry x="395" y="760" width="120" height="60" as="geometry"/>
                 </mxCell>
-                <mxCell id="nc7TGM9VJOAbuPxR5EIq-5" value="VIF&lt;div&gt;192.168.1.1&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="TwFW3nXOWYlrV0tRIcs8-1">
+                <mxCell id="nc7TGM9VJOAbuPxR5EIq-5" value="VIF&lt;div&gt;192.168.1.1&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="TwFW3nXOWYlrV0tRIcs8-1" vertex="1">
                     <mxGeometry x="428.65" y="640" width="60" height="30" as="geometry"/>
                 </mxCell>
             </root>
         </mxGraphModel>
     </diagram>
     <diagram id="GfwSnYsWayV_x6-FL-_3" name="VyOS-Containers">
-        <mxGraphModel dx="754" dy="485" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+        <mxGraphModel dx="814" dy="485" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>

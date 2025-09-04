@@ -3,7 +3,7 @@ Description=VyOS Rotuer/Firewall
 
 [Container]
 ContainerName=vyos
-Image=localhost/vyos:1.5-2025-08-13
+Image=localhost/vyos:latest
 HostName=bfnetgw
 SecurityLabelDisable=true
 PodmanArgs=--privileged
