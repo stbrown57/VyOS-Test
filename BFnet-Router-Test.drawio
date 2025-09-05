@@ -1,6 +1,6 @@
 <mxfile host="65bd71144e" pages="2">
     <diagram name="VyOS Test Environment" id="YJpuhlcBkHwwciwfDe9R">
-        <mxGraphModel dx="754" dy="485" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+        <mxGraphModel dx="814" dy="499" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -112,7 +112,7 @@
         </mxGraphModel>
     </diagram>
     <diagram name="VyOS Network Interfaces" id="ODgUAoBt59TFhCGswUOa">
-        <mxGraphModel dx="814" dy="485" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+        <mxGraphModel dx="814" dy="499" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
             <root>
                 <mxCell id="TwFW3nXOWYlrV0tRIcs8-0"/>
                 <mxCell id="TwFW3nXOWYlrV0tRIcs8-1" parent="TwFW3nXOWYlrV0tRIcs8-0"/>
@@ -196,7 +196,7 @@
                 </mxCell>
                 <UserObject label="VyOS Secondary&lt;br&gt;gwbackup" link="data:page/id,GfwSnYsWayV_x6-FL-_3" id="TwFW3nXOWYlrV0tRIcs8-24">
                     <mxCell style="rounded=1;whiteSpace=wrap;html=1;shadow=1;" parent="TwFW3nXOWYlrV0tRIcs8-1" vertex="1">
-                        <mxGeometry x="530" y="570" width="120" height="60" as="geometry"/>
+                        <mxGeometry x="531.35" y="570" width="120" height="60" as="geometry"/>
                     </mxCell>
                 </UserObject>
                 <mxCell id="TwFW3nXOWYlrV0tRIcs8-26" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;endArrow=none;endFill=0;" parent="TwFW3nXOWYlrV0tRIcs8-1" source="TwFW3nXOWYlrV0tRIcs8-27" target="TwFW3nXOWYlrV0tRIcs8-29" edge="1">
@@ -208,7 +208,7 @@
                     </mxGeometry>
                 </mxCell>
                 <mxCell id="TwFW3nXOWYlrV0tRIcs8-27" value="VyOS LAN Network" style="sketch=0;pointerEvents=1;shadow=0;dashed=0;html=1;strokeColor=#82b366;fillColor=#d5e8d4;aspect=fixed;labelPosition=left;verticalLabelPosition=middle;verticalAlign=middle;align=right;outlineConnect=0;shape=mxgraph.vvd.virtual_switch;points=[];" parent="TwFW3nXOWYlrV0tRIcs8-1" vertex="1">
-                    <mxGeometry x="430" y="680" width="50" height="26.5" as="geometry"/>
+                    <mxGeometry x="430" y="720" width="50" height="26.5" as="geometry"/>
                 </mxCell>
                 <mxCell id="nc7TGM9VJOAbuPxR5EIq-6" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="TwFW3nXOWYlrV0tRIcs8-1" source="TwFW3nXOWYlrV0tRIcs8-29" edge="1">
                     <mxGeometry relative="1" as="geometry">
@@ -216,16 +216,16 @@
                     </mxGeometry>
                 </mxCell>
                 <mxCell id="TwFW3nXOWYlrV0tRIcs8-29" value="Test Host" style="rounded=1;whiteSpace=wrap;html=1;shadow=1;" parent="TwFW3nXOWYlrV0tRIcs8-1" vertex="1">
-                    <mxGeometry x="395" y="760" width="120" height="60" as="geometry"/>
+                    <mxGeometry x="396.35" y="800" width="120" height="60" as="geometry"/>
                 </mxCell>
                 <mxCell id="nc7TGM9VJOAbuPxR5EIq-5" value="VIF&lt;div&gt;192.168.1.1&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="TwFW3nXOWYlrV0tRIcs8-1" vertex="1">
-                    <mxGeometry x="428.65" y="640" width="60" height="30" as="geometry"/>
+                    <mxGeometry x="428.65" y="680" width="60" height="30" as="geometry"/>
                 </mxCell>
             </root>
         </mxGraphModel>
     </diagram>
     <diagram id="GfwSnYsWayV_x6-FL-_3" name="VyOS-Containers">
-        <mxGraphModel dx="814" dy="485" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+        <mxGraphModel dx="814" dy="499" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>

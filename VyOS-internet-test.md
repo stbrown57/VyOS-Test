@@ -1,6 +1,6 @@
 # Test connectivity of the VyOS-internet virtual switch
 
-From the Kea-server container shell in and ping the gateway and an external internet host. This will verify the virtual networks functionality. The default Podman network is a bridge with IPAM similary to DHCP and a NAT funtion.
+From the Kea-server container shell in and ping the gateway and an external internet host. This will verify the virtual networks functionality. The default Podman network is a bridge with IPAM similarly to DHCP and a NAT function.
 
 This worked as expected.
 
