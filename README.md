@@ -2,9 +2,9 @@
 
 ## Production
 
-### September 2, 2-25
+### September 2, 2025
 
-Two VyOS podman container instances are running on two fan-less devices, (Merckx and BMC). The WAN failover is not working, however the router/firewall will work for a while when the primary WAN port is connected directly to the ISP's ethernet connection. Unfortunately, the renew does will fail on some subsequent renewal attempt. So there are two current problems with the configuration.
+Two VyOS Podman container instances are running on two fan-less devices, (Merckx and BMC). The WAN failover is not working, however the router/firewall will work for a while when the primary WAN port is connected directly to the ISP's ethernet connection. Unfortunately, the renewal fails on some subsequent attempt. So there are two current problems with the configuration.
 
 * Lease renewal [problem](DHCP-WAN-Renewal.md)
 
@@ -29,3 +29,19 @@ The test system is running correctly with the Kea server serving only one addres
 
 1. The kea server needs to be re-built with iptables and restoring the masquerading settings.
 2. There was a lot of fiddling done to get the primary (vyos-1) to receive the one IP address being served form the kea server, and to be listed in the vrrp settings as the master.
+
+### September 8, 2025
+
+A test DMZ network was added to replicate the production system and more closely emulate the production system. In doing this I removed the instances and recreated the containers with the added network. The two interfaces exhibited some unexpected behavior.  The eth1 LAN networks on both instances were set as the "MASTER", and neither container could ping the other on the non-vif interface. As a result both containers were assigning the vif interface (192.168.1.1) to the LAN interface.  I suspect the interface names are somewhat arbitrary in there assignment and not necessarily assigned in the order in which they appear in the create command. If may be the order is done based on the arbitrary mac address assigned to the interface.
+
+* Inspect Podamn Networks
+  Note the mac addresses on the vyos-1 and vyos-2 interfaces listed in the inspection
+* Show the interface (eth#)
+  Verify the interface name matching the MAC address and match the name (eth#) to the Podman network
+
+  The VyOS instances may be generating there own MAC address independant of the MAC in the inspect.
+
+  Recreate the containers with networks one at a time to ensure the proper interface name.
+
+  
+
