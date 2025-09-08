@@ -1,0 +1,172 @@
+set firewall ipv4 name DMZ-WAN rule 1 action 'accept'
+set firewall ipv4 name DMZ-WAN rule 1 state 'established'
+set firewall ipv4 name DMZ-WAN rule 1 state 'related'
+set firewall ipv4 name DMZ-WAN rule 1 state 'new'
+set firewall ipv4 name DMZ-WAN rule 2 action 'drop'
+set firewall ipv4 name DMZ-WAN rule 2 log
+set firewall ipv4 name DMZ-WAN rule 2 state 'invalid'
+set firewall ipv4 name LAN-LOCAL default-log
+set firewall ipv4 name LAN-LOCAL rule 1 action 'accept'
+set firewall ipv4 name LAN-LOCAL rule 1 state 'established'
+set firewall ipv4 name LAN-LOCAL rule 1 state 'related'
+set firewall ipv4 name LAN-LOCAL rule 2 action 'drop'
+set firewall ipv4 name LAN-LOCAL rule 2 log
+set firewall ipv4 name LAN-LOCAL rule 2 state 'invalid'
+set firewall ipv4 name LAN-LOCAL rule 750 action 'accept'
+set firewall ipv4 name LAN-LOCAL rule 750 description 'LAN DHCP access to local server'
+set firewall ipv4 name LAN-LOCAL rule 750 destination port '67-68'
+set firewall ipv4 name LAN-LOCAL rule 750 protocol 'udp'
+set firewall ipv4 name LAN-LOCAL rule 800 action 'accept'
+set firewall ipv4 name LAN-LOCAL rule 800 description 'Allow SSH from LAN to the VyOS router'
+set firewall ipv4 name LAN-LOCAL rule 800 destination port '22'
+set firewall ipv4 name LAN-LOCAL rule 800 log
+set firewall ipv4 name LAN-LOCAL rule 800 protocol 'tcp'
+set firewall ipv4 name LAN-WAN rule 1 action 'accept'
+set firewall ipv4 name LAN-WAN rule 1 state 'established'
+set firewall ipv4 name LAN-WAN rule 1 state 'related'
+set firewall ipv4 name LAN-WAN rule 1 state 'new'
+set firewall ipv4 name LAN-WAN rule 2 action 'drop'
+set firewall ipv4 name LAN-WAN rule 2 log
+set firewall ipv4 name LAN-WAN rule 2 state 'invalid'
+set firewall ipv4 name LOCAL-LAN default-log
+set firewall ipv4 name LOCAL-LAN rule 1 action 'accept'
+set firewall ipv4 name LOCAL-LAN rule 1 state 'established'
+set firewall ipv4 name LOCAL-LAN rule 1 state 'related'
+set firewall ipv4 name LOCAL-LAN rule 2 action 'drop'
+set firewall ipv4 name LOCAL-LAN rule 2 log
+set firewall ipv4 name LOCAL-LAN rule 2 state 'invalid'
+set firewall ipv4 name LOCAL-LAN rule 100 action 'accept'
+set firewall ipv4 name LOCAL-LAN rule 100 description 'Allow DHCP reponces out of LOCAL'
+set firewall ipv4 name LOCAL-LAN rule 100 destination port '67-68'
+set firewall ipv4 name LOCAL-LAN rule 100 protocol 'udp'
+set firewall ipv4 name LOCAL-LAN rule 100 source port '67-68'
+set firewall ipv4 name LOCAL-WAN default-log
+set firewall ipv4 name LOCAL-WAN rule 1 action 'accept'
+set firewall ipv4 name LOCAL-WAN rule 1 state 'established'
+set firewall ipv4 name LOCAL-WAN rule 1 state 'related'
+set firewall ipv4 name LOCAL-WAN rule 1 state 'new'
+set firewall ipv4 name LOCAL-WAN rule 2 action 'drop'
+set firewall ipv4 name LOCAL-WAN rule 2 log
+set firewall ipv4 name LOCAL-WAN rule 2 state 'invalid'
+set firewall ipv4 name WAN-LAN rule 1 action 'accept'
+set firewall ipv4 name WAN-LAN rule 1 state 'established'
+set firewall ipv4 name WAN-LAN rule 1 state 'related'
+set firewall ipv4 name WAN-LAN rule 2 action 'drop'
+set firewall ipv4 name WAN-LAN rule 2 log
+set firewall ipv4 name WAN-LAN rule 2 state 'invalid'
+set firewall ipv4 name WAN-LOCAL default-action 'drop'
+set firewall ipv4 name WAN-LOCAL rule 1 action 'accept'
+set firewall ipv4 name WAN-LOCAL rule 1 state 'established'
+set firewall ipv4 name WAN-LOCAL rule 1 state 'related'
+set firewall ipv4 name WAN-LOCAL rule 2 action 'accept'
+set firewall ipv4 name WAN-LOCAL rule 2 description 'Allow DHCP responses'
+set firewall ipv4 name WAN-LOCAL rule 2 destination port '68'
+set firewall ipv4 name WAN-LOCAL rule 2 protocol 'udp'
+set firewall ipv4 name WAN-LOCAL rule 2 source port '67'
+set firewall ipv4 name WAN-LOCAL rule 3 action 'drop'
+set firewall ipv4 name WAN-LOCAL rule 3 log
+set firewall ipv4 name WAN-LOCAL rule 3 state 'invalid'
+set firewall zone DMZ default-action 'drop'
+set firewall zone DMZ member interface 'eth2'
+set firewall zone LAN default-action 'drop'
+set firewall zone LAN from LOCAL firewall name 'LOCAL-LAN'
+set firewall zone LAN from WAN firewall name 'WAN-LAN'
+set firewall zone LAN member interface 'eth1'
+set firewall zone LOCAL default-action 'drop'
+set firewall zone LOCAL from LAN firewall name 'LAN-LOCAL'
+set firewall zone LOCAL from WAN firewall name 'WAN-LOCAL'
+set firewall zone LOCAL member interface 'lo'
+set firewall zone WAN default-action 'drop'
+set firewall zone WAN from LAN firewall name 'LAN-WAN'
+set firewall zone WAN from LOCAL firewall name 'LOCAL-WAN'
+set firewall zone WAN member interface 'eth0'
+set high-availability vrrp group DMZ address 192.168.3.1/24
+set high-availability vrrp group DMZ interface 'eth2'
+set high-availability vrrp group DMZ priority '200'
+set high-availability vrrp group DMZ vrid '3'
+set high-availability vrrp group LAN address 192.168.1.1/24
+set high-availability vrrp group LAN interface 'eth1'
+set high-availability vrrp group LAN priority '100'
+set high-availability vrrp group LAN vrid '1'
+set high-availability vrrp group WAN address 169.254.1.1/32
+set high-availability vrrp group WAN advertise-interval '1'
+set high-availability vrrp group WAN disable
+set high-availability vrrp group WAN interface 'eth0'
+set high-availability vrrp group WAN priority '200'
+set high-availability vrrp group WAN transition-script backup '/opt/vyatta/etc/config/scripts/vrrp-backup.sh'
+set high-availability vrrp group WAN transition-script master '/opt/vyatta/etc/config/scripts/vrrp-master.sh'
+set high-availability vrrp group WAN vrid '50'
+set interfaces ethernet eth0 address 'dhcp'
+set interfaces ethernet eth0 description 'WAN'
+set interfaces ethernet eth0 hw-id 'c8:a7:0a:b6:24:54'
+set interfaces ethernet eth0 offload gro
+set interfaces ethernet eth0 offload gso
+set interfaces ethernet eth0 offload sg
+set interfaces ethernet eth0 offload tso
+set interfaces ethernet eth1 address '192.168.1.2/24'
+set interfaces ethernet eth1 description 'LAN'
+set interfaces ethernet eth1 offload gro
+set interfaces ethernet eth1 offload gso
+set interfaces ethernet eth1 offload sg
+set interfaces ethernet eth1 offload tso
+set interfaces ethernet eth2 address '192.168.3.2/24'
+set interfaces ethernet eth2 description 'DMZ'
+set interfaces ethernet eth2 offload gro
+set interfaces ethernet eth2 offload gso
+set interfaces ethernet eth2 offload sg
+set interfaces ethernet eth2 offload tso
+set interfaces loopback lo
+set nat source rule 100 outbound-interface name 'eth0'
+set nat source rule 100 source address '192.168.1.0/24'
+set nat source rule 100 translation address 'masquerade'
+set service config-sync mode 'load'
+set service config-sync secondary address '192.168.1.3'
+set service config-sync secondary key 'UgRiYt@GV@wrt%5c6mkaJmM&LX5Xr9X2'
+set service config-sync secondary port '8443'
+set service config-sync section firewall
+set service config-sync section nat
+set service dhcp-server shared-network-name BFNET authoritative
+set service dhcp-server shared-network-name BFNET option domain-name '6browns.org'
+set service dhcp-server shared-network-name BFNET option name-server '1.1.1.1'
+set service dhcp-server shared-network-name BFNET subnet 192.168.1.0/24 option default-router '192.168.1.1'
+set service dhcp-server shared-network-name BFNET subnet 192.168.1.0/24 option domain-name '6browns.org'
+set service dhcp-server shared-network-name BFNET subnet 192.168.1.0/24 option name-server '1.1.1.1'
+set service dhcp-server shared-network-name BFNET subnet 192.168.1.0/24 range 1 start '192.168.1.33'
+set service dhcp-server shared-network-name BFNET subnet 192.168.1.0/24 range 1 stop '192.168.1.220'
+set service dhcp-server shared-network-name BFNET subnet 192.168.1.0/24 static-mapping bmc ip-address '192.168.1.253'
+set service dhcp-server shared-network-name BFNET subnet 192.168.1.0/24 static-mapping bmc mac '20:7c:14:f1:28:dc'
+set service dhcp-server shared-network-name BFNET subnet 192.168.1.0/24 static-mapping hifiberry ip-address '192.168.1.231'
+set service dhcp-server shared-network-name BFNET subnet 192.168.1.0/24 static-mapping hifiberry mac 'dc:a6:32:ef:31:45'
+set service dhcp-server shared-network-name BFNET subnet 192.168.1.0/24 static-mapping look ip-address '192.168.1.243'
+set service dhcp-server shared-network-name BFNET subnet 192.168.1.0/24 static-mapping look mac 'e4:5f:01:5e:ce:65'
+set service dhcp-server shared-network-name BFNET subnet 192.168.1.0/24 static-mapping merckx ip-address '192.168.1.254'
+set service dhcp-server shared-network-name BFNET subnet 192.168.1.0/24 static-mapping merckx mac 'a8:b8:e0:03:c4:ba'
+set service dhcp-server shared-network-name BFNET subnet 192.168.1.0/24 static-mapping scott ip-address '192.168.1.239'
+set service dhcp-server shared-network-name BFNET subnet 192.168.1.0/24 static-mapping scott mac '10:dd:b1:bc:a5:31'
+set service dhcp-server shared-network-name BFNET subnet 192.168.1.0/24 static-mapping tarmac ip-address '192.168.1.250'
+set service dhcp-server shared-network-name BFNET subnet 192.168.1.0/24 static-mapping tarmac mac '14:b3:1f:2d:07:df'
+set service dhcp-server shared-network-name BFNET subnet 192.168.1.0/24 subnet-id '1'
+set service ntp allow-client address '127.0.0.0/8'
+set service ntp allow-client address '169.254.0.0/16'
+set service ntp allow-client address '10.0.0.0/8'
+set service ntp allow-client address '172.16.0.0/12'
+set service ntp allow-client address '192.168.0.0/16'
+set service ntp allow-client address '::1/128'
+set service ntp allow-client address 'fe80::/10'
+set service ntp allow-client address 'fc00::/7'
+set service ntp server time1.vyos.net
+set service ntp server time2.vyos.net
+set service ntp server time3.vyos.net
+set service ssh listen-address '192.168.1.2'
+set service ssh port '22'
+set system config-management commit-revisions '100'
+set system console device ttyS0 speed '115200'
+set system host-name 'bfnetgw'
+set system login user stbrown authentication encrypted-password '$6$rounds=656000$oH0qkDBpD3phNwNz$TZXMYea8vPqu0INRUHa10nhwd8F5vXkdFEjRpSuDAnWtNDdi2Zl2Xzss6kBId9K3O7pvaNky/d034YA/ei.rC0'
+set system login user stbrown authentication public-keys stbrown@6browns.org key 'AAAAC3NzaC1lZDI1NTE5AAAAIDuLpdiYVDvkE0v+tWNT2Vq4u9Xu3dG553Eaa99o+jwC'
+set system login user stbrown authentication public-keys stbrown@6browns.org type 'ssh-ed25519'
+set system login user stbrown authentication public-keys stbrown@factor.6browns.org key 'AAAAC3NzaC1lZDI1NTE5AAAAIPJMqAp3BkrIIdL/9kVtitFwl3yGvs3Jyl3oWpS08AVD'
+set system login user stbrown authentication public-keys stbrown@factor.6browns.org type 'ssh-ed25519'
+set system login user vyos authentication encrypted-password '$6$rounds=656000$UQN9srKP8Pkv/Tmx$QXfWu0fMwgjYbfebARowwkbbioMtqE.UATmQp9GBbRvddplCDv9JPuuEw4gIivmORpTZdYZL5dCwnWfNWLch9/'
+set system syslog local facility all level 'info'
+set system syslog local facility local7 level 'debug'

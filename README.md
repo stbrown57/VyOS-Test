@@ -22,3 +22,10 @@ The configurations of both the primary and secondary VyOS instance on the propos
 ```bash
 show configuration command > [filename.conf]
 ```
+
+### September 7, 2025
+
+The test system is running correctly with the Kea server serving only one address and the manual steps that needed to be applied. 
+
+1. The kea server needs to be re-built with iptables and restoring the masquerading settings.
+2. There was a lot of fiddling done to get the primary (vyos-1) to receive the one IP address being served form the kea server, and to be listed in the vrrp settings as the master.
