@@ -12,4 +12,6 @@ Configure the primary instance as cleanly as possible to test basic viability.
 2. Statically set LAN interface address to 192.168.1.1
 3. Remove DMZ interface
 4. Move ISP ethernet to primary WAN interface
+
    
+[Gemini info on renewal failure](https://share.google/aimode/Iuy77SXN09yAfCCx0)
