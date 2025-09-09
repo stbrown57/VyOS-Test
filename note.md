@@ -10,4 +10,6 @@ Configure the primary instance as cleanly as possible to test basic viability.
 
 1. Remove all high-availability
 2. Statically set LAN interface address to 192.168.1.1
+3. Remove DMZ interface
+4. Move ISP ethernet to primary WAN interface
    
