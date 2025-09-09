@@ -2,6 +2,10 @@
 
 This is a Podman network flagged as "internal" without IPAM. It should funtion as a L2 switch.
 
+Try this [L2 simulation in Podman]
+
+
+
 ```bash
 podman network create --internal --ipam-driver=none vyos-lan
 ```
