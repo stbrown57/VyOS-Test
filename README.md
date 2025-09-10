@@ -29,6 +29,8 @@ If all this pans out, try to specify the MAC address in the vyos-wan configurati
 
 Nothing matches up. Try tcpdump capture:
 
+The capture was up through two cycles, it looks like Verizon is not respnding to unicast DHCEREQUETS. The capture is located in the Capture directory. 
+
 ```bash
 vyos@bfnetgw:~$ sudo tcpdump -i eth0 -n -vvv udp port 67 or 68 -s 0 -w /opt/vyatta/etc/config/dhcp-eth0.cap
 ```

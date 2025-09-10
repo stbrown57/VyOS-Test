@@ -56,4 +56,6 @@ run show task-scheduler
 How to adapt the script for different needs
 For multiple interfaces: Create separate scripts for each interface you need to renew, or modify the script to accept an interface name as an argument.
 Add logging: Include logging within the script to monitor its execution and status. For example, add a line like logger "DHCP renew executed for eth0" to send a message to the system logs.
-Add checks: To prevent unnecessary renewals, you could add logic to the script to check the lease status before forcing a renewal. 
+Add checks: To prevent unnecessary renewals, you could add logic to the script to check the lease status before forcing a renewal.
+
+There may be a problem with MGT interface on merckx, it seems to be the source of the martian packets.
