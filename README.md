@@ -2,6 +2,19 @@
 
 ## Production
 
+### September 10, 2015
+
+The production system is running but the WAN DHCP renewal is working sometimes and failing others. This is the auto renewal which may be using unicast for the renewal. Each time I have access to the network and I run the "renew dhcp interface eth0", the IP is renew immediately. The renew command may be suing broadcast for the renewal. I read some discussion that this may be caused be a split route or an ARP table with multiple MAC addresses for the same IP address, this may happen with a mavvlan configuration.  The vyos-wan network has IPAM disabled, so an IP address is not assigned to the interface from an external source, how every the interface is assigned a MAC address as seen in the inspect output.
+
+```bash
+podman network inspect vyos-wan
+```
+
+This MAC address may be in the ARP table or logs from with in the VyOS container. Check the martian errors and see if the MAC address is in the log.
+
+If all this pans out, try to specify the MAC address in the vyos-wan configuration to be the cloned MAC, that would match the MAC in the VyOS instance of eth0.
+
+
 ### September 2, 2025
 
 Two VyOS Podman container instances are running on two fan-less devices, (Merckx and BMC). The WAN failover is not working, however the router/firewall will work for a while when the primary WAN port is connected directly to the ISP's ethernet connection. Unfortunately, the renewal fails on some subsequent attempt. So there are two current problems with the configuration.
