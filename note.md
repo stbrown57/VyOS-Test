@@ -15,3 +15,7 @@ Configure the primary instance as cleanly as possible to test basic viability.
 
    
 [Gemini info on renewal failure](https://share.google/aimode/Iuy77SXN09yAfCCx0)
+
+https://share.google/aimode/Iuy77SXN09yAfCCx0
+
+[DHCP syntac flow](https://ipcisco.com/lesson/dhcp-ip-allocation-operation/)
