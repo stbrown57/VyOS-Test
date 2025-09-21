@@ -7,7 +7,7 @@ Image=localhost/vyos:latest
 HostName=bfnetgw
 SecurityLabelDisable=true
 PodmanArgs=--privileged
-Network=wan:interfac-name=eth0
+Network=wan:interface-name=eth0
 Network=lan:interface-name=eth1
 Network=dmz:interface-name=eth2
 Volume=/lib/modules:/lib/modules
